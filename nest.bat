@@ -1,0 +1,1 @@
+C:\Users\mihaylov_da\mypr\node_modules\.bin\nest %*
