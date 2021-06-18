@@ -16,6 +16,7 @@ export class AnswerController {
         }  
         return testDto.id;
     }*/
+    @UseGuards(JwtAuthGuard)
     @Get()
     getAll() {
          return this.appService.All();
