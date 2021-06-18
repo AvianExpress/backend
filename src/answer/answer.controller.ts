@@ -1,4 +1,4 @@
-import { Body, Controller, Delete, Get, HttpCode, HttpException, HttpStatus, NotFoundException, Param, Post, Query, Req, UseGuards, UsePipes, ValidationPipe } from '@nestjs/common';
+import { Body, Controller, Delete, Get, HttpCode, HttpException, HttpStatus, NotFoundException, Param, Post, Put, Query, Req, UseGuards, UsePipes, ValidationPipe } from '@nestjs/common';
 import { AppService } from 'src/app.service';
 import { JwtAuthGuard } from 'src/auth/guards/jwt.guard';
 import { addressDto } from './dto/address.dto';
@@ -20,6 +20,10 @@ export class AnswerController {
     @Get()
     getAll() {
          return this.appService.All();
+    }
+    @Put(':id')
+    update(@Param('id') id:string, @Body() req: postModelDto){
+        return this.appService.update(id, req);
     }
     @UseGuards(JwtAuthGuard)
     @Get(':id')
