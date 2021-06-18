@@ -24,8 +24,10 @@ export class AppService {
   };
   async update(id:string, req: postModelDto){
     const user = await getRepository(User).findOne(id);
+  
     if (user){
-      const results = await getRepository(User).update(id, req);
+      //Проверь везде где integer
+      const results = await getRepository(User).save(req);
     }
     return
     
