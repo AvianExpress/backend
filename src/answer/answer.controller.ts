@@ -22,7 +22,7 @@ export class AnswerController {
          return this.appService.All();
     }
     @Put(':id')
-    update(@Param('id') id:string, @Body() req: postModelDto){
+    update(@Param('id') id:number, @Body() req: postModelDto){
         return this.appService.update(id, req);
     }
     @UseGuards(JwtAuthGuard)

@@ -22,9 +22,13 @@ export class AppService {
       const user = this.repo.find({relations: ["address"]});
       return user;
   };
-  async update(id:string, req: postModelDto){
+  async update(id:number, req: postModelDto){
+    console.log(id);
+    //console.log(req);
+    
     const user = await getRepository(User).findOne(id);
-  
+    console.log(user);
+    console.log(req);
     if (user){
       //Проверь везде где integer
       const results = await getRepository(User).save(req);
@@ -34,8 +38,8 @@ export class AppService {
   }
   async All(){
     //return await getRepository(User).createQueryBuilder("user").leftJoinAndSelect("address", "address", "address.addressID = user.address").getMany();
-    //return await getRepository(User).createQueryBuilder("user").leftJoinAndSelect("user.address", "address").select(["id", "name, surname, phone, address"]).getRawMany();
-    return await getRepository(User).createQueryBuilder("user").leftJoinAndSelect("user.address", "address").select(["id", "name, surname, phone"]).getRawMany();
+    return await getRepository(User).createQueryBuilder("user").leftJoinAndSelect("user.address", "address").select(["id", "name, surname, phone, address"]).getRawMany();
+    //return await getRepository(User).createQueryBuilder("user").leftJoinAndSelect("user.address", "address").select(["id", "name, surname, phone"]).getRawMany();
   };
   async getOne(id: number){
     //return this.repo.findOne(id, {relations: ["address"]});
