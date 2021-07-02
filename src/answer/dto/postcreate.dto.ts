@@ -1,10 +1,11 @@
 import { IsNumber, IsString, MaxLength } from 'class-validator'
-import { isNum } from '../answer.decorators';
+import { OneToOne } from 'typeorm';
+import { User } from '../answer.entity';
 
 
 export class postModelDto{
     @IsNumber()
-    id: number;
+    id?: number;
     @IsString()
     name: string;
     @IsString()
@@ -12,6 +13,6 @@ export class postModelDto{
     @IsNumber()
     phone: number;
     @IsNumber()
-    addressID: number;
+    addressID?: number;
     
 }

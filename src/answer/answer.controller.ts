@@ -31,8 +31,8 @@ export class AnswerController {
          return this.appService.getOne(id);
     }
 
-    @UsePipes(new ValidationPipe)
-    @Post('create')
+
+    @Post(':id')
     async create(@Body() req: postModelDto){
         
         return this.appService.add(req);

@@ -1,5 +1,4 @@
 export class AnswerModel {
-
     name:string
     surname: string;
     phone: number;
