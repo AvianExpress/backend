@@ -1,1 +1,1 @@
-C:\Users\Gondusov_dv\backend\node_modules\.bin\nest %*
+C:\Users\brone\backend\node_modules\.bin\nest %*

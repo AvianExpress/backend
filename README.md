@@ -26,11 +26,14 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
+
 ## Installation
 
 ```bash
 $ npm install
 ```
+
+Нужно будет изменить путь к файлу в nest.bat, если он откажется запускаться
 
 ## Running the app
 
@@ -71,3 +74,7 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](LICENSE).
+
+
+
+

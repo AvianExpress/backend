@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { Test, TestingModule } from '@nestjs/testing';
 import { INestApplication } from '@nestjs/common';
 import * as request from 'supertest';
@@ -13,8 +14,8 @@ const testDto: postModelDto = {
   addressID: null,
 }
 const loginDto: AuthDto = {
-  login: 'qqwq@as.w',
-  password: '1',
+  login: 'bird@mail.ru',
+  password: '111',
 }
 
 describe('AppController (e2e)', () => {
